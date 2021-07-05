@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     before_action :require_no_user, :only => [:new, :create]
     before_action :require_user, :only => [:edit, :show, :update, :destroy]
-    
+
     def create
         @user = User.new(user_params)
 
@@ -29,6 +29,7 @@ class UsersController < ApplicationController
         @user = @current_user
 
         if @user.update(user_params)
+            flash[:notice] = "Update successful!"
             redirect_to @user
         else
             render :edit
