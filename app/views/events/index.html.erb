@@ -3,7 +3,7 @@
 <ul>
   <% @events.each do |event| %>
     <li>
-        <%= link_to event.title, user_event_path(params[:user_id], event.id) %>
+        <%= link_to event.title, user_event_path(current_user, event.id) %>
     </li>
   <% end %>
 </ul>

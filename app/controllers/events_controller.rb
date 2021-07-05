@@ -1,10 +1,12 @@
 class EventsController < ApplicationController
+    before_action :require_user, :only => [:create, :new, :edit, :show, :update, :destroy]
+
     def index
         @events = Event.all
     end
 
     def create
-        @user = User.find(params[:user_id])
+        @user = @current_user
         @event = @user.events.new(event_params)
 
         if @event.save
@@ -15,22 +17,22 @@ class EventsController < ApplicationController
     end
 
     def new
-        @user = User.find(params[:user_id])
+        @user = @current_user
         @event = @user.events.new
     end
 
     def edit
-        @user = User.find(params[:user_id])
+        @user = @current_user
         @event = @user.events.find(params[:id])
     end
 
     def show
-        @user = User.find(params[:user_id])
+        @user = @current_user
         @event = @user.events.find(params[:id])
     end
 
     def update
-        @user = User.find(params[:user_id])
+        @user = @current_user
         @event = @user.events.find(params[:id])
 
         if @event.update(event_params)
@@ -41,7 +43,7 @@ class EventsController < ApplicationController
     end
 
     def destroy
-        @user = User.find(params[:user_id])
+        @user = @current_user
         @event = @user.events.find(params[:id])
         @event.destroy
 

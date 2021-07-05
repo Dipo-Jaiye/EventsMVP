@@ -16,9 +16,9 @@
 <p><%= @event.visible %></p>
 
 <ul>
-  <li><%= link_to "Edit", edit_user_event_path(@user,@event) %></li>
-  <li><%= link_to "Destroy", user_event_path(@user,@event),
+  <li><%= link_to "Edit", edit_user_event_path(current_user,@event) %></li>
+  <li><%= link_to "Destroy", user_event_path(current_user,@event),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
-  <li><%= link_to "Profile", user_path(@user) %></li>
+  <li><%= link_to "Profile", user_path(current_user) %></li>
 </ul>
