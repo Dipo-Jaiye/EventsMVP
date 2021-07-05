@@ -1,14 +1,24 @@
 # README
+Using Ruby on Rails (or equivalent MVC framework), this is a basic MVP of an events application, using only traditional CRUD methods.  
+The app: 
+- Introduce authentication support for users to login and signup as required 
+- Provides a manage events screen that:
+- Allows a user to create and store information about an event 
+- Allows a user to state if the event is free/paid 
+- Provide a list of all events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Other things considered: 
+- An event may need to be active or inactive
+- An event may need to be edited or deleted 
 
-Things you may want to cover:
+Points to Note
+- Use rails gems to accelerate the task completion
 
 * Ruby version
+Ruby 2.7.3 (x64-mingw32)
 
 * System dependencies
-
+Windows
 * Configuration
 
 * Database creation
