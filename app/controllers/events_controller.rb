@@ -1,8 +1,9 @@
 class EventsController < ApplicationController
-    before_action :require_user, :only => [:create, :new, :edit, :show, :update, :destroy]
+    before_action :require_user
 
     def index
-        @events = Event.all
+        @user = current_user
+        @events = @user.events.all
     end
 
     def create
