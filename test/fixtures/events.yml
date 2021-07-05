@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  pay_status: MyString
+  from: 2021-07-05 11:44:38
+  to: 2021-07-05 11:44:38
+  event_status: MyString
+
+two:
+  title: MyString
+  description: MyText
+  pay_status: MyString
+  from: 2021-07-05 11:44:38
+  to: 2021-07-05 11:44:38
+  event_status: MyString

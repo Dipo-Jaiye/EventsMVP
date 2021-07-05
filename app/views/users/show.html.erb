@@ -1,0 +1,12 @@
+<h1>Welcome <%= @user.name %></h1>
+
+<h2>Events</h2>
+<p><%= render @user.events %></p>
+
+<ul>
+  <li><%= link_to "New Event", new_user_event_path(@user) %><li>
+  <li><%= link_to "Edit account settings", edit_user_path(@user) %></li>
+  <li><%= link_to "Delete account", user_path(@user),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>

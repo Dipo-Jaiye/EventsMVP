@@ -1,0 +1,11 @@
+<h1>Events</h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+        <%= link_to event.title, user_event_path(params[:user_id], event.id) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Event", new_user_event_path %>
