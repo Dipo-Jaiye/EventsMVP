@@ -4,7 +4,8 @@
 <p><%= render @user.events %></p>
 
 <ul>
-  <li><%= link_to "New Event", new_user_event_path(@user) %><li>
+  <li><%= link_to "New Event", new_user_event_path(@user)%></li>
+  <li><%= link_to "Manage Events", user_events_path(@user)%></li>
   <li><%= link_to "Edit account settings", edit_user_path(@user) %></li>
   <li><%= link_to "Delete account", user_path(@user),
                   method: :delete,
