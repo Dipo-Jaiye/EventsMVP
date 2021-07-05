@@ -3,7 +3,7 @@
 <ul>
   <% @events.each do |event| %>
     <li>
-        <%= event.title%>
+        <%= event.title%> created by <%= event.user.name %>
     </li>
   <% end %>
 </ul>

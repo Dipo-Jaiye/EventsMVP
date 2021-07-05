@@ -23,6 +23,7 @@
       <ul class="nav navbar-nav pull-right">
         <% if current_user %>
           <li><span><%= current_user.email %></span></li>
+          <li><span><%= link_to "Profile", user_path(current_user) %></span></li>
           <li><%= link_to 'Sign Out', sign_out_path, method: :delete %></li>
         <% else %>
           <li><%= link_to 'Sign In', sign_in_path %></li>
